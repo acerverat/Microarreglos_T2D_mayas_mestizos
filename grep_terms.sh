@@ -10,4 +10,8 @@ grep -E 'iabetes|nsulin|lucose|lycemic' Axiom_PMDA.na36.r7.a8.annot.csv | tr ','
 cut -f1 diabetes_related_snps.csv | tail -n+2 | tr -d '"' > diabetes_related_snp_ids.txt
 
 grep -v "^#" Axiom_PMDA.na36.r7.a8.annot.csv | tr ',' '\t' >> all_snps.csv
+
+# convert to annovar input
+grep -v "^#" Axiom_PMDA.na36.r7.a8.annot.csv | awk -F"," '{print $5,$6,$7,$14,$15,$1,$2,$3}' OFS="\t" | tr -d '"' > Axiom_snps.avinput 
+
 cd ..
