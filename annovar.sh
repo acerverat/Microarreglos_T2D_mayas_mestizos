@@ -1,3 +1,5 @@
+# bash annovar.sh /labs/gpib/alejandra/Microarreglos_T2D_mayas_mestizos/Axiom_snps.avinput /labs/gpib/alejandra/Microarreglos_T2D_mayas_mestizos/annovar_
+
 annovar=/home/programs/annovar
 in=$1
 out=$2
